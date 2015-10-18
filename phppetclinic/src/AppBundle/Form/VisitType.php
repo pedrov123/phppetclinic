@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class PetType extends AbstractType
+class VisitType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,10 +15,9 @@ class PetType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('birthdate')
-            ->add('petType')
-            ->add('owner')
+            ->add('date')
+            ->add('description')
+            ->add('pet')
         ;
     }
     
@@ -28,7 +27,7 @@ class PetType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Pet'
+            'data_class' => 'AppBundle\Entity\Visit'
         ));
     }
 
@@ -37,6 +36,6 @@ class PetType extends AbstractType
      */
     public function getName()
     {
-        return 'appbundle_pet';
+        return 'appbundle_visit';
     }
 }

@@ -43,6 +43,17 @@ class Pet
     protected $petType;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Owner", inversedBy="pets")
+     * @ORM\JoinColumn(name="owner_id", referencedColumnName="id")
+     **/
+    protected $owner;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Visit", mappedBy="pet")
+     **/
+    protected $visits;
+
+    /**
      * Get id
      *
      * @return integer
@@ -122,5 +133,70 @@ class Pet
     public function getPetType()
     {
         return $this->petType;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->visits = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Set owner
+     *
+     * @param \AppBundle\Entity\Owner $owner
+     *
+     * @return Pet
+     */
+    public function setOwner(\AppBundle\Entity\Owner $owner = null)
+    {
+        $this->owner = $owner;
+
+        return $this;
+    }
+
+    /**
+     * Get owner
+     *
+     * @return \AppBundle\Entity\Owner
+     */
+    public function getOwner()
+    {
+        return $this->owner;
+    }
+
+    /**
+     * Add visit
+     *
+     * @param \AppBundle\Entity\Visit $visit
+     *
+     * @return Pet
+     */
+    public function addVisit(\AppBundle\Entity\Visit $visit)
+    {
+        $this->visits[] = $visit;
+
+        return $this;
+    }
+
+    /**
+     * Remove visit
+     *
+     * @param \AppBundle\Entity\Visit $visit
+     */
+    public function removeVisit(\AppBundle\Entity\Visit $visit)
+    {
+        $this->visits->removeElement($visit);
+    }
+
+    /**
+     * Get visits
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getVisits()
+    {
+        return $this->visits;
     }
 }
