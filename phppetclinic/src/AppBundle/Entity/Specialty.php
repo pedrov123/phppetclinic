@@ -15,7 +15,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="specialty")
  */
-class Specialty {
+class Specialty
+{
 
     /**
      * @ORM\Column(type="integer")
