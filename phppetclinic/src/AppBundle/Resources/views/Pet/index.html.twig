@@ -18,7 +18,7 @@
             <tr>
                 <td><a href="{{ path('pet_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{{ entity.name }}</td>
-                <td>{% if entity.birthdate %}{{ entity.birthdate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.birthdate %}{{ entity.birthdate|date('d.m.Y') }}{% endif %}</td>
                 <td>{% if entity.petType %}{{ entity.petType.name }}{% endif %}</td>
                 <td>
                 <ul>
