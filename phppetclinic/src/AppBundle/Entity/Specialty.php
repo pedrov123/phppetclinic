@@ -30,6 +30,11 @@ class Specialty
      */
     protected $name;
 
+    public function __toString()
+    {
+        return strval($this->getName());
+    }
+
     /**
      * Get id
      *

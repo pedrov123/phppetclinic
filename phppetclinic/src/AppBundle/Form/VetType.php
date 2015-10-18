@@ -17,6 +17,7 @@ class VetType extends AbstractType
         $builder
             ->add('firstName')
             ->add('lastName')
+            ->add('specialties')
         ;
     }
     

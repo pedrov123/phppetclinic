@@ -35,6 +35,19 @@ class Vet
     protected $lastName;
 
     /**
+     * @ORM\ManyToMany(targetEntity="Specialty")
+     * @ORM\JoinTable(name="vet_specialty",
+     *      joinColumns={@ORM\JoinColumn(name="specialty_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="vet_id", referencedColumnName="id")}
+     *      )
+     **/
+    protected $specialties;
+
+    public function __construct() {
+        $this->specialties = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
      * Get id
      *
      * @return integer
@@ -90,5 +103,39 @@ class Vet
     public function getLastName()
     {
         return $this->lastName;
+    }
+
+    /**
+     * Add specialty
+     *
+     * @param \AppBundle\Entity\Specialty $specialty
+     *
+     * @return Vet
+     */
+    public function addSpecialty(\AppBundle\Entity\Specialty $specialty)
+    {
+        $this->specialties[] = $specialty;
+
+        return $this;
+    }
+
+    /**
+     * Remove specialty
+     *
+     * @param \AppBundle\Entity\Specialty $specialty
+     */
+    public function removeSpecialty(\AppBundle\Entity\Specialty $specialty)
+    {
+        $this->specialties->removeElement($specialty);
+    }
+
+    /**
+     * Get specialties
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSpecialties()
+    {
+        return $this->specialties;
     }
 }
