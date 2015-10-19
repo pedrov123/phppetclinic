@@ -17,6 +17,10 @@
                 <th>Lastname</th>
                 <td>{{ entity.lastName }}</td>
             </tr>
+            <tr>
+                <th>Specialties</th>
+                <td>{% for specialty in entity.specialties %}{{ specialty }} {% endfor %}</td>
+            </tr>
         </tbody>
     </table>
 
