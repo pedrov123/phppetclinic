@@ -53,6 +53,11 @@ class Pet
      **/
     protected $visits;
 
+    public function __toString()
+    {
+        return strval($this->getName());
+    }
+
     /**
      * Get id
      *

@@ -29,6 +29,19 @@
                 <th>Telephone</th>
                 <td>{{ entity.telephone }}</td>
             </tr>
+            <tr>
+                <th>Pets</th>
+                <td>
+                    <table>
+                    {% for pet in entity.pets %}
+                        <tr><td>{{ pet.id }}</td></tr>
+                        <tr><td>{{ pet.name }}</td></tr>
+                        <tr><td>{{ pet.birthdate|date('d.m.Y') }}</td></tr>
+                        <tr><td>{% if pet.petType %}{{ pet.petType.name }}{% endif %}</td></tr>
+                    {% endfor %}
+                    </table>
+                </td>
+            </tr>
         </tbody>
     </table>
 

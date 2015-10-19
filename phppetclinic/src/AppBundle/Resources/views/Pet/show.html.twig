@@ -17,6 +17,14 @@
                 <th>Birthdate</th>
                 <td>{{ entity.birthdate|date('d.m.Y') }}</td>
             </tr>
+            <tr>
+                <th>PetType</th>
+                <td>{% if entity.petType %}{{ entity.petType.name }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Owner</th>
+                <td>{% if entity.owner %}{{ entity.owner.firstName }} {{ entity.owner.lastName }}{% endif %}</td>
+            </tr>
         </tbody>
     </table>
 

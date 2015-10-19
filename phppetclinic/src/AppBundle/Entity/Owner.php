@@ -59,6 +59,11 @@ class Owner
         $this->pets = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return strval($this->getFirstName()." ".$this->getLastName());
+    }
+
     /**
      * Get id
      *
