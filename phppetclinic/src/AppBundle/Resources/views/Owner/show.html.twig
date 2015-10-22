@@ -40,9 +40,9 @@
                         <tr><td>{% if pet.petType %}{{ pet.petType.name }}{% endif %}</td></tr>
                         <tr><td><a href="{{ path('pet_edit', {'id': pet.id }) }}">Edit Pet</a></td></tr>
                         {% for visit in pet.visits %}
-                            <tr><td>{{ visit.id }}</td><td>{{ visit.date }}</td><td>{{ visit.description }}</td></tr>
+                            <tr><td>{{ visit.id }}</td><td>{{ visit.date|date('d.m.Y')  }}</td><td>{{ visit.description }}</td></tr>
                         {% endfor %}
-                        <tr><td><a href="">Add Visit</a></td></tr>
+                        <tr><td><a href="{{ path('visit_new4pet', {'id': pet.id }) }}">Add Visit</a></td></tr>
                     {% endfor %}
                     </table>
                 </td>

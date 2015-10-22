@@ -100,6 +100,33 @@ class VisitController extends Controller
     }
 
     /**
+     * Displays a form to create a new Visit entity.
+     *
+     * @Route("/new/pet/{id}", name="visit_new4pet")
+     * @Method("GET")
+     * @Template()
+     */
+    public function newForPetAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $entityPet = $em->getRepository('AppBundle:Pet')->find($id);
+
+        if (!$entityPet) {
+            throw $this->createNotFoundException('Unable to find Pet entity.');
+        }
+
+        $entity = new Visit();
+        $entity->setPet($entityPet);
+        $form   = $this->createCreateForm($entity);
+
+        return array(
+            'entity' => $entity,
+            'form'   => $form->createView(),
+        );
+    }
+
+    /**
      * Finds and displays a Visit entity.
      *
      * @Route("/{id}", name="visit_show")
