@@ -29,9 +29,14 @@
     </table>
 
         <ul class="record_actions">
+            <li>
+                <a href="{{ path('owner_show',{ 'id': entity.owner.id }) }}">
+                    To the Owner
+                </a>
+            </li>
     <li>
         <a href="{{ path('pet') }}">
-            Back to the list
+            To the Pet list
         </a>
     </li>
     <li>

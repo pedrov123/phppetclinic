@@ -11,7 +11,7 @@
             </tr>
             <tr>
                 <th>Date</th>
-                <td>{{ entity.date|date('Y-m-d H:i:s') }}</td>
+                <td>{{ entity.date|date('d.m.Y') }}</td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -22,8 +22,8 @@
 
         <ul class="record_actions">
     <li>
-        <a href="{{ path('visit') }}">
-            Back to the list
+        <a href="{{ path('owner_show',{'id': entity.pet.owner.id}) }}">
+            Back to the Owner
         </a>
     </li>
     <li>

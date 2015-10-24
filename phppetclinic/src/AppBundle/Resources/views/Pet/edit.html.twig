@@ -6,11 +6,16 @@
     {{ form(edit_form) }}
 
         <ul class="record_actions">
-    <li>
-        <a href="{{ path('pet') }}">
-            Back to the list
-        </a>
-    </li>
+            <li>
+                <a href="{{ path('owner_show',{ 'id': entity.owner.id }) }}">
+                    To the Owner
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('pet') }}">
+                    To the Pet list
+                </a>
+            </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
 {% endblock %}
