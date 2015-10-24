@@ -100,6 +100,33 @@ class PetController extends Controller
     }
 
     /**
+     * Displays a form to create a new Pet entity.
+     *
+     * @Route("/new/owner/{id}", name="pet_new4owner")
+     * @Method("GET")
+     * @Template()
+     */
+    public function new4OwnerAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $entityOwner = $em->getRepository('AppBundle:Owner')->find($id);
+
+        if (!$entityOwner) {
+            throw $this->createNotFoundException('Unable to find Owner entity.');
+        }
+
+        $entity = new Pet();
+        $entity->setOwner($entityOwner);
+        $form   = $this->createCreateForm($entity);
+
+        return array(
+            'entity' => $entity,
+            'form'   => $form->createView(),
+        );
+    }
+
+    /**
      * Finds and displays a Pet entity.
      *
      * @Route("/{id}", name="pet_show")

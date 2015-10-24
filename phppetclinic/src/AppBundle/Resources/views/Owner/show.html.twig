@@ -44,6 +44,7 @@
                         {% endfor %}
                         <tr><td><a href="{{ path('visit_new4pet', {'id': pet.id }) }}">Add Visit</a></td></tr>
                     {% endfor %}
+                        <tr><td><a href="{{ path('pet_new4owner', {'id': entity.id }) }}">Add Pet</a></td></tr>
                     </table>
                 </td>
             </tr>
@@ -53,7 +54,7 @@
         <ul class="record_actions">
     <li>
         <a href="{{ path('owner') }}">
-            Back to the list
+            Back to the Owner list
         </a>
     </li>
     <li>

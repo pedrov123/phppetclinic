@@ -1,13 +1,13 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Visit creation</h1>
+    <h1>Pet creation</h1>
 
     {{ form(form) }}
 
     <ul class="record_actions">
         <li>
-            <a href="{{ path('owner_show',{'id': entity.pet.owner.id }) }}">
+            <a href="{{ path('owner_show',{'id': entity.owner.id }) }}">
                 Back to the Owner
             </a>
         </li>
