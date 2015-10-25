@@ -5,7 +5,7 @@
 {% block body -%}
     <h1>Owner</h1>
 
-    <table class="record_properties">
+    <table class="record_properties table table-striped">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -34,19 +34,45 @@
             <tr>
                 <th>Pets</th>
                 <td>
-                    <table>
+                    <table class="table table-striped">
                     {% for pet in entity.pets %}
-                        <tr><td>{{ pet.id }}</td></tr>
-                        <tr><td>{{ pet.name }}</td></tr>
-                        <tr><td>{{ pet.birthdate|date('d.m.Y') }}</td></tr>
-                        <tr><td>{% if pet.petType %}{{ pet.petType.name }}{% endif %}</td></tr>
-                        <tr><td><a href="{{ path('pet_edit', {'id': pet.id }) }}">Edit Pet</a></td></tr>
+                        <tr><th>Pet.Id</th><td>{{ pet.id }}</td></tr>
+                        <tr><th>Pet.Name</th><td>{{ pet.name }}</td></tr>
+                        <tr><th>Pet.Birthdate</th><td>{{ pet.birthdate|date('d.m.Y') }}</td></tr>
+                        <tr><th>Pet.PetType</th><td>{% if pet.petType %}{{ pet.petType.name }}{% endif %}</td></tr>
+                        <tr>
+                            <td><a href="{{ path('pet_edit', {'id': pet.id }) }}">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit Pet</a>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Visits</th>
+                            <td>
+                            <table class="record_properties table table-striped">
                         {% for visit in pet.visits %}
-                            <tr><td>{{ visit.id }}</td><td>{{ visit.date|date('d.m.Y')  }}</td><td>{{ visit.description }}</td></tr>
+                            <tr>
+                                <td>{{ visit.id }}</td>
+                                <td>{{ visit.date|date('d.m.Y')  }}</td>
+                                <td>{{ visit.description }}</td>
+                            </tr>
                         {% endfor %}
-                        <tr><td><a href="{{ path('visit_new4pet', {'id': pet.id }) }}">Add Visit</a></td></tr>
+                            </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td><a href="{{ path('visit_new4pet', {'id': pet.id }) }}">
+                                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Visit</a>
+                            </td>
+                        </tr>
                     {% endfor %}
-                        <tr><td><a href="{{ path('pet_new4owner', {'id': entity.id }) }}">Add Pet</a></td></tr>
+                        <tr>
+                            <td><a href="{{ path('pet_new4owner', {'id': entity.id }) }}">
+                                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Pet</a>
+                            </td>
+                            <td></td>
+                        </tr>
                     </table>
                 </td>
             </tr>
@@ -61,7 +87,7 @@
     </li>
     <li>
         <a href="{{ path('owner_edit', { 'id': entity.id }) }}">
-            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit
+            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit Owner
         </a>
     </li>
     <li>{{ form(delete_form) }}</li>
