@@ -21,10 +21,12 @@
                 <td>
                 <ul>
                     <li>
-                        <a href="{{ path('specialty_show', { 'id': entity.id }) }}">show</a>
+                        <a href="{{ path('specialty_show', { 'id': entity.id }) }}">
+                            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> show</a>
                     </li>
                     <li>
-                        <a href="{{ path('specialty_edit', { 'id': entity.id }) }}">edit</a>
+                        <a href="{{ path('specialty_edit', { 'id': entity.id }) }}">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> edit</a>
                     </li>
                 </ul>
                 </td>
@@ -36,7 +38,7 @@
         <ul>
         <li>
             <a href="{{ path('specialty_new') }}">
-                Create a new Specialty
+                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Create a new Specialty
             </a>
         </li>
     </ul>

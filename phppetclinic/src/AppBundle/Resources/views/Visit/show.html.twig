@@ -25,12 +25,12 @@
         <ul class="record_actions">
     <li>
         <a href="{{ path('owner_show',{'id': entity.pet.owner.id}) }}">
-            Back to the Owner
+            <span class="glyphicon glyphicon-backward" aria-hidden="true"></span> Back to the Owner
         </a>
     </li>
     <li>
         <a href="{{ path('visit_edit', { 'id': entity.id }) }}">
-            Edit
+            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit
         </a>
     </li>
     <li>{{ form(delete_form) }}</li>

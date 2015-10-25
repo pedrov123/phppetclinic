@@ -21,12 +21,12 @@
         <ul class="record_actions">
     <li>
         <a href="{{ path('specialty') }}">
-            Back to the list
+            <span class="glyphicon glyphicon-list" aria-hidden="true"></span> Back to the Specialty list
         </a>
     </li>
     <li>
         <a href="{{ path('specialty_edit', { 'id': entity.id }) }}">
-            Edit
+            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit
         </a>
     </li>
     <li>{{ form(delete_form) }}</li>

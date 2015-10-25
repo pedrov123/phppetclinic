@@ -23,10 +23,12 @@
                 <td>
                 <ul>
                     <li>
-                        <a href="{{ path('visit_show', { 'id': entity.id }) }}">show</a>
+                        <a href="{{ path('visit_show', { 'id': entity.id }) }}">
+                            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> show</a>
                     </li>
                     <li>
-                        <a href="{{ path('visit_edit', { 'id': entity.id }) }}">edit</a>
+                        <a href="{{ path('visit_edit', { 'id': entity.id }) }}">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> edit</a>
                     </li>
                 </ul>
                 </td>
@@ -38,7 +40,7 @@
         <ul>
         <li>
             <a href="{{ path('visit_new') }}">
-                Create a new Visit
+                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Create a new Visit
             </a>
         </li>
     </ul>
