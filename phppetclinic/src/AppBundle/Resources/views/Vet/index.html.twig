@@ -45,5 +45,15 @@
                 <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Create a new Vet
             </a>
         </li>
+        <li>
+            <a href="{{ path('vet', {'_format':'xml'}) }}">
+                <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> XML
+            </a>
+        </li>
+            <li>
+                <a href="{{ path('vet', {'_format':'atom'}) }}">
+                    <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Atom Feed
+                </a>
+            </li>
     </ul>
     {% endblock %}

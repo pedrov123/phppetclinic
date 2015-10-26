@@ -31,5 +31,6 @@ Development
 -----------
 
 ORM: https://symfony.com/doc/current/book/doctrine.html
-CRUD: Generating a CRUD Controller Based on a Doctrine Entity: 
+
+CRUD: Generating a CRUD Controller Based on a Doctrine Entity:
 http://symfony.com/doc/current/bundles/SensioGeneratorBundle/commands/generate_doctrine_crud.html

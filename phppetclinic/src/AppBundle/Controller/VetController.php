@@ -21,7 +21,7 @@ class VetController extends Controller
     /**
      * Lists all Vet entities.
      *
-     * @Route("/", name="vet")
+     * @Route("/{_format}", defaults={"_format"="html"}, requirements = { "_format" = "html|xml|atom" }, name="vet")
      * @Method("GET")
      * @Template()
      */
@@ -31,14 +31,21 @@ class VetController extends Controller
 
         $entities = $em->getRepository('AppBundle:Vet')->findAll();
 
+        // for the atom feed:
+        $lastUpdated = new \DateTime();
+        $lastUpdated = $lastUpdated->format(DATE_ATOM);
+
         return array(
             'entities' => $entities,
+            'lastUpdated' => $lastUpdated,
+            'feedId' => sha1($this->get('router')->generate('vet', array('_format'=> 'atom'), true)),
         );
     }
+
     /**
      * Creates a new Vet entity.
      *
-     * @Route("/", name="vet_create")
+     * @Route("/new", name="vet_create")
      * @Method("POST")
      * @Template("AppBundle:Vet:new.html.twig")
      */
