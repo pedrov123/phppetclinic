@@ -25,14 +25,17 @@ class SpecialtyController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('AppBundle:Specialty')->findAll();
+        $entities= $em->getRepository('AppBundle:Specialty')->findAll();
+
+        $paginator  = $this->get('knp_paginator');
+        $pagination= $paginator->paginate($entities,$request->query->getInt('page', 1)/*page number*/,5);
 
         return array(
-            'entities' => $entities,
+            'pagination' => $pagination,
         );
     }
     /**
