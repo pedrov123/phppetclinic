@@ -25,7 +25,7 @@ class VisitController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -33,6 +33,13 @@ class VisitController extends Controller
 
         return array(
             'entities' => $entities,
+        );
+
+        $paginator  = $this->get('knp_paginator');
+        $pagination= $paginator->paginate($entities,$request->query->getInt('page', 1)/*page number*/,5);
+
+        return array(
+            'pagination' => $pagination,
         );
     }
     /**

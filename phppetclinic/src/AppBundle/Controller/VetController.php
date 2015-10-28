@@ -25,17 +25,21 @@ class VetController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('AppBundle:Vet')->findAll();
+
+        $paginator  = $this->get('knp_paginator');
+        $pagination= $paginator->paginate($entities,$request->query->getInt('page', 1)/*page number*/,5);
 
         // for the atom feed:
         $lastUpdated = new \DateTime();
         $lastUpdated = $lastUpdated->format(DATE_ATOM);
 
         return array(
+            'pagination' => $pagination,
             'entities' => $entities,
             'lastUpdated' => $lastUpdated,
             'feedId' => sha1($this->get('router')->generate('vet', array('_format'=> 'atom'), true)),
