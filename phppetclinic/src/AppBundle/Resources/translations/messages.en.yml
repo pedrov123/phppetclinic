@@ -1,5 +1,7 @@
 Previous: Previous
 Next: Next
+create.new: Create a new
+edit: Edit
 language:
   switcher: Choose Language
   en: English
@@ -7,3 +9,6 @@ language:
 specialty:
   specialty: Specialty
   specialties: Specialties
+back:
+  to:
+    list: Back to the list

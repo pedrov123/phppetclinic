@@ -29,12 +29,12 @@
         <ul class="record_actions">
     <li>
         <a href="{{ path('vet') }}">
-            <span class="glyphicon glyphicon-list" aria-hidden="true"></span> Back to the Vet list
+            <span class="glyphicon glyphicon-list" aria-hidden="true"></span> {% trans %}back.to.list{% endtrans %}
         </a>
     </li>
     <li>
         <a href="{{ path('vet_edit', { 'id': entity.id }) }}">
-            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit
+            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> {% trans %}edit{% endtrans %}
         </a>
     </li>
     <li>{{ form(delete_form) }}</li>

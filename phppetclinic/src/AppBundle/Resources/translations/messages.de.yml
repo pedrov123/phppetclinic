@@ -1,5 +1,7 @@
 Previous: zurück
 Next: nächstes
+create.new: Füge hinzu:
+edit: Ändern
 language:
   switcher: Sprache einstellen
   en: Englisch
@@ -7,3 +9,6 @@ language:
 specialty:
   specialty: Fachrichtung
   specialties: Fachrichtungen
+back:
+  to:
+    list: Zurück zur Liste

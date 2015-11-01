@@ -87,7 +87,7 @@
     </li>
     <li>
         <a href="{{ path('owner_edit', { 'id': entity.id }) }}">
-            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit Owner
+            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> {% trans %}edit{% endtrans %} Owner
         </a>
     </li>
     <li>{{ form(delete_form) }}</li>
