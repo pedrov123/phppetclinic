@@ -1,5 +1,9 @@
 Previous: zurück
 Next: nächstes
+language:
+  switcher: Sprache einstellen
+  en: Englisch
+  de: Deutsch
 specialty:
-  index:
-    heading: Fachrichtungen
+  specialty: Fachrichtung
+  specialties: Fachrichtungen

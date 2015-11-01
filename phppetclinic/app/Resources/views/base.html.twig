@@ -19,6 +19,9 @@
 
         <style>
            li { list-style-type: none; }
+           .language_switcher ul li {
+                display: inline;
+           }
         </style>
 
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -56,6 +59,23 @@
             </div>
         </nav>
         {% block body %}{% endblock %}
+        <div class="language_switcher">
+            <ul>
+                <li>
+                    {% trans %}language.switcher{% endtrans %}:&nbsp;
+                </li>
+                <li>
+                    <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'})) }}">
+                        {% trans %}language.en{% endtrans %}
+                    </a>&nbsp;|&nbsp;
+                </li>
+                <li>
+                    <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'de'})) }}">
+                        {% trans %}language.de{% endtrans %}
+                    </a>
+                </li>
+            </ul>
+        </div>
         {% block javascripts %}{% endblock %}
     </div>
     </body>

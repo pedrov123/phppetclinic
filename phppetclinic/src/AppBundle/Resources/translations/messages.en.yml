@@ -1,5 +1,9 @@
 Previous: Previous
 Next: Next
+language:
+  switcher: Choose Language
+  en: English
+  de: German
 specialty:
-  index:
-    heading: Specialty list
+  specialty: Specialty
+  specialties: Specialties

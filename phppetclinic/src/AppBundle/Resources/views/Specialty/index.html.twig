@@ -1,9 +1,9 @@
 {% extends '::base.html.twig' %}
 
-{% block title -%}Specialty{% endblock %}
+{% block title -%}{% trans %}specialty.specialty{% endtrans %}{% endblock %}
 
 {% block body -%}
-    <h1>{% trans %}specialty.index.heading{% endtrans %}</h1>
+    <h1>{% trans %}specialty.specialties{% endtrans %}</h1>
 
     {# total items count #}
     <div class="count">
@@ -47,7 +47,8 @@
         <ul>
         <li>
             <a href="{{ path('specialty_new') }}">
-                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Create a new Specialty
+                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                Create a new {% trans %}specialty.specialty{% endtrans %}
             </a>
         </li>
     </ul>
