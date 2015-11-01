@@ -13,7 +13,7 @@ use AppBundle\Form\PetTypeType;
 /**
  * PetType controller.
  *
- * @Route("/pettype")
+ * @Route("/{_locale}/pettype", defaults={"_locale"="en"}, requirements = { "_locale" = "en|de" })
  */
 class PetTypeController extends Controller
 {

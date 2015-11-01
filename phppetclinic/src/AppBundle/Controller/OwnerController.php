@@ -13,7 +13,7 @@ use AppBundle\Form\OwnerType;
 /**
  * Owner controller.
  *
- * @Route("/owner")
+ * @Route("/{_locale}/owner", defaults={"_locale"="en"}, requirements = { "_locale" = "en|de" })
  */
 class OwnerController extends Controller
 {

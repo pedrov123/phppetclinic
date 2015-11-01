@@ -23,6 +23,8 @@ http://localhost:8000/config.php
 run
 ---
 
+php app/console cache:clear
+
 php app/console server:run
 
 http://localhost:8000
@@ -30,9 +32,15 @@ http://localhost:8000
 Development
 -----------
 
-ORM: https://symfony.com/doc/current/book/doctrine.html
+ORM: 
+https://symfony.com/doc/current/book/doctrine.html
 
 CRUD: Generating a CRUD Controller Based on a Doctrine Entity:
 http://symfony.com/doc/current/bundles/SensioGeneratorBundle/commands/generate_doctrine_crud.html
 
-Pagination: https://github.com/KnpLabs/KnpPaginatorBundle
+Pagination: 
+https://github.com/KnpLabs/KnpPaginatorBundle
+
+Translation: 
+http://symfony.com/doc/current/components/translation/introduction.html#installation
+http://symfony2-document.readthedocs.org/en/latest/book/translation.html

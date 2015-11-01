@@ -13,7 +13,7 @@ use AppBundle\Form\VisitType;
 /**
  * Visit controller.
  *
- * @Route("/visit")
+ * @Route("/{_locale}/visit", defaults={"_locale"="en"}, requirements = { "_locale" = "en|de" })
  */
 class VisitController extends Controller
 {

@@ -13,7 +13,7 @@ use AppBundle\Form\SpecialtyType;
 /**
  * Specialty controller.
  *
- * @Route("/specialty")
+ * @Route("/{_locale}/specialty", defaults={"_locale"="en"}, requirements = { "_locale" = "en|de" })
  */
 class SpecialtyController extends Controller
 {

@@ -13,7 +13,7 @@ use AppBundle\Form\VetType;
 /**
  * Vet controller.
  *
- * @Route("/vet")
+ * @Route("/{_locale}/vet", defaults={"_locale"="en"}, requirements = { "_locale" = "en|de" })
  */
 class VetController extends Controller
 {
