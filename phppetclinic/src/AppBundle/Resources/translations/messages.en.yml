@@ -10,6 +10,9 @@ language:
   en: English
   de: German
 owner: Owner
+add:
+  pet: Add Pet
+  visit: Add Visit
 pet:
   pet: Pet
   pets: Pets

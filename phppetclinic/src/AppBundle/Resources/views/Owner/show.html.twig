@@ -41,8 +41,11 @@
                         <tr><th>Pet.Birthdate</th><td>{{ pet.birthdate|date('d.m.Y') }}</td></tr>
                         <tr><th>Pet.PetType</th><td>{% if pet.petType %}{{ pet.petType.name }}{% endif %}</td></tr>
                         <tr>
-                            <td><a href="{{ path('pet_edit', {'id': pet.id }) }}">
-                                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit Pet</a>
+                            <td>
+                                <a href="{{ path('pet_edit', {'id': pet.id }) }}">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                    {% trans %}pet.pet{% endtrans %} {% trans %}edit{% endtrans %}
+                                </a>
                             </td>
                             <td></td>
                         </tr>
@@ -62,14 +65,20 @@
                         </tr>
                         <tr>
                             <th></th>
-                            <td><a href="{{ path('visit_new4pet', {'id': pet.id }) }}">
-                                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Visit</a>
+                            <td>
+                                <a href="{{ path('visit_new4pet', {'id': pet.id }) }}">
+                                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                                    {% trans %}add.visit{% endtrans %}
+                                </a>
                             </td>
                         </tr>
                     {% endfor %}
                         <tr>
-                            <td><a href="{{ path('pet_new4owner', {'id': entity.id }) }}">
-                                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Pet</a>
+                            <td>
+                                <a href="{{ path('pet_new4owner', {'id': entity.id }) }}">
+                                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                                    {% trans %}add.pet{% endtrans %}
+                                </a>
                             </td>
                             <td></td>
                         </tr>
@@ -82,12 +91,13 @@
         <ul class="record_actions">
     <li>
         <a href="{{ path('owner') }}">
-            <span class="glyphicon glyphicon-list" aria-hidden="true"></span> Back to the Owner list
+            <span class="glyphicon glyphicon-list" aria-hidden="true"></span> {% trans %}back.to.list{% endtrans %}
         </a>
     </li>
     <li>
         <a href="{{ path('owner_edit', { 'id': entity.id }) }}">
-            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> {% trans %}edit{% endtrans %} Owner
+            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>{% trans %}owner{% endtrans %}
+            {% trans %}edit{% endtrans %}
         </a>
     </li>
     <li>{{ form(delete_form) }}</li>

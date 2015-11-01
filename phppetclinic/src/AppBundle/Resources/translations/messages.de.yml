@@ -10,6 +10,9 @@ language:
   en: Englisch
   de: Deutsch
 owner: Besitzer
+add:
+  pet: Tier hinzufügen
+  visit: Besuch hinzufügen
 pet:
   pet: Haustier
   pets: Haustiere
