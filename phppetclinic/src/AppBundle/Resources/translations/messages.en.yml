@@ -31,3 +31,4 @@ specialty:
 back:
   to:
     list: Back to the list
+    owner: Back to the Owner

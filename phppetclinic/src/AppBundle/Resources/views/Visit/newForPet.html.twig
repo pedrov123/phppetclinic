@@ -10,7 +10,8 @@
     <ul class="record_actions table table-striped">
         <li>
             <a href="{{ path('owner_show',{'id': entity.pet.owner.id }) }}">
-                <span class="glyphicon glyphicon-backward" aria-hidden="true"></span> Back to the Owner
+                <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>
+                {% trans %}back.to.owner{% endtrans %}
             </a>
         </li>
     </ul>
