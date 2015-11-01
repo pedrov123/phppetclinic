@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/{_locale}", defaults={"_locale"="en"}, requirements = { "_locale" = "en|de" }, name="homepage")
      */
     public function indexAction(Request $request)
     {
