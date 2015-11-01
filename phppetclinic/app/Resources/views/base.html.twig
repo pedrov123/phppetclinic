@@ -49,11 +49,11 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="petclinic-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="{{ path('owner') }}">Owner</a></li>
-                        <li><a href="{{ path('pet') }}">Pets</a></li>
-                        <li><a href="{{ path('pettype') }}">PetType</a></li>
-                        <li><a href="{{ path('vet') }}">Vet</a></li>
-                        <li><a href="{{ path('specialty') }}">Specialties</a></li>
+                        <li><a href="{{ path('owner') }}">{% trans %}owner{% endtrans %}</a></li>
+                        <li><a href="{{ path('pet') }}">{% trans %}pet.pets{% endtrans %}</a></li>
+                        <li><a href="{{ path('pettype') }}">{% trans %}pettype.pettypes{% endtrans %}</a></li>
+                        <li><a href="{{ path('vet') }}">{% trans %}vet.vets{% endtrans %}</a></li>
+                        <li><a href="{{ path('specialty') }}">{% trans %}specialty.specialties{% endtrans %}</a></li>
                     </ul>
                 </div>
             </div>

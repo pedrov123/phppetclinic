@@ -1,11 +1,27 @@
 Previous: zurück
 Next: nächstes
 create.new: Füge hinzu:
-edit: Ändern
+edit: ändern
+show: anzeigen
+Delete: Löschen
+Update: Aktualisieren
 language:
   switcher: Sprache einstellen
   en: Englisch
   de: Deutsch
+owner: Besitzer
+pet:
+  pet: Haustier
+  pets: Haustiere
+pettype:
+  pettype: Tierart
+  pettypes: Tierarten
+vet:
+  vet: Tierarzt
+  vets: Tierärzte
+visit:
+  visit: Besuch
+  visits: Besuche
 specialty:
   specialty: Fachrichtung
   specialties: Fachrichtungen

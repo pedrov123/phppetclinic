@@ -1,9 +1,9 @@
 {% extends '::base.html.twig' %}
 
-{% block title -%}Visit{% endblock %}
+{% block title -%}{% trans %}visit.visit{% endtrans %}{% endblock %}
 
 {% block body -%}
-    <h1>Visit creation</h1>
+    <h1>{% trans %}visit.visit{% endtrans %} creation</h1>
 
     {{ form(form) }}
 

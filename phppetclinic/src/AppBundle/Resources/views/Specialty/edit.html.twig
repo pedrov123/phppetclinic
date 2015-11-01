@@ -1,9 +1,9 @@
 {% extends '::base.html.twig' %}
 
-{% block title -%}Specialty{% endblock %}
+{% block title -%}{% trans %}specialty.specialty{% endtrans %}{% endblock %}
 
 {% block body -%}
-    <h1>Specialty edit</h1>
+    <h1>{% trans %}specialty.specialty{% endtrans %} {% trans %}edit{% endtrans %}</h1>
 
     {{ form(edit_form) }}
 

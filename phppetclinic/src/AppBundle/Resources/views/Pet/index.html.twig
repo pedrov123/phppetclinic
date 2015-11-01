@@ -1,9 +1,9 @@
 {% extends '::base.html.twig' %}
 
-{% block title -%}Pet{% endblock %}
+{% block title -%}{% trans %}pet.pet{% endtrans %}{% endblock %}
 
 {% block body -%}
-    <h1>Pet list</h1>
+    <h1>{% trans %}pet.pets{% endtrans %}</h1>
 
     {# total items count #}
     <div class="count">
@@ -33,11 +33,15 @@
                 <ul>
                     <li>
                         <a href="{{ path('pet_show', { 'id': entity.id }) }}">
-                            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> show</a>
+                            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                            {% trans %}show{% endtrans %}
+                        </a>
                     </li>
                     <li>
                         <a href="{{ path('pet_edit', { 'id': entity.id }) }}">
-                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> edit</a>
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            {% trans %}edit{% endtrans %}
+                        </a>
                     </li>
                 </ul>
                 </td>

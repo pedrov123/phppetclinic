@@ -1,9 +1,9 @@
 {% extends '::base.html.twig' %}
 
-{% block title -%}Vet{% endblock %}
+{% block title -%}{% trans %}vet.vet{% endtrans %}{% endblock %}
 
 {% block body -%}
-    <h1>Vet creation</h1>
+    <h1>{% trans %}vet.vet{% endtrans %} creation</h1>
 
     {{ form(form) }}
 

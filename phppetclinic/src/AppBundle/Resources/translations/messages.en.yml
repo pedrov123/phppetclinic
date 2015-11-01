@@ -1,11 +1,27 @@
 Previous: Previous
 Next: Next
 create.new: Create a new
-edit: Edit
+edit: edit
+show: show
+Delete: Delete
+Update: Update
 language:
   switcher: Choose Language
   en: English
   de: German
+owner: Owner
+pet:
+  pet: Pet
+  pets: Pets
+pettype:
+  pettype: PetType
+  pettypes: PetTypes
+vet:
+  vet: Vet
+  vets: Vets
+visit:
+  visit: Visit
+  visits: Visits
 specialty:
   specialty: Specialty
   specialties: Specialties
