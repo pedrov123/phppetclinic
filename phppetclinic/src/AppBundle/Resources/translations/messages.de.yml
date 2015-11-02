@@ -25,9 +25,12 @@ add:
 pet:
   pet: Haustier
   pets: Haustiere
+Birthdate: Geburtstag
+Pet type: Tierart
 pettype:
   pettype: Tierart
   pettypes: Tierarten
+Name: Name
 vet:
   vet: Tierarzt
   vets: Tierärzte

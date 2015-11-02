@@ -25,9 +25,12 @@ add:
 pet:
   pet: Pet
   pets: Pets
+Birthdate: Birthdate
+Pet type: Pet Type
 pettype:
   pettype: PetType
   pettypes: PetTypes
+Name: Name
 vet:
   vet: Vet
   vets: Vets
