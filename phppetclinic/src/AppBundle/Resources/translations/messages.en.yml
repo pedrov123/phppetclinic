@@ -13,12 +13,12 @@ language:
   de: German
 owner:
   owner: Owner
-  id: Id
-  firstname: Firstname
-  lastname: Lastname
-  address: Address
-  city: City
-  telephone: Telephone
+Id: Id
+First name: First name
+Last name: Last name
+Address: Address
+City: City
+Telephone: Telephone
 add:
   pet: Add Pet
   visit: Add Visit
