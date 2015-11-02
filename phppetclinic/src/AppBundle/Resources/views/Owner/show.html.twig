@@ -1,9 +1,9 @@
 {% extends '::base.html.twig' %}
 
-{% block title -%}{% trans %}owner{% endtrans %}{% endblock %}
+{% block title -%}{% trans %}owner.owner{% endtrans %}{% endblock %}
 
 {% block body -%}
-    <h1>{% trans %}owner{% endtrans %}</h1>
+    <h1>{% trans %}owner.owner{% endtrans %}</h1>
 
     <table class="record_properties table table-striped">
         <tbody>
@@ -96,7 +96,7 @@
     </li>
     <li>
         <a href="{{ path('owner_edit', { 'id': entity.id }) }}">
-            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>{% trans %}owner{% endtrans %}
+            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>{% trans %}owner.owner{% endtrans %}
             {% trans %}edit{% endtrans %}
         </a>
     </li>

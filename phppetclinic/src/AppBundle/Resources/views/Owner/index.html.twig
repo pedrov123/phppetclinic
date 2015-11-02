@@ -1,9 +1,9 @@
 {% extends '::base.html.twig' %}
 
-{% block title -%}{% trans %}owner{% endtrans %}{% endblock %}
+{% block title -%}{% trans %}owner.owner{% endtrans %}{% endblock %}
 
 {% block body -%}
-    <h1>{% trans %}owner{% endtrans %}</h1>
+    <h1>{% trans %}owner.owner{% endtrans %}</h1>
 
     {# total items count #}
     <div class="count">
@@ -13,12 +13,12 @@
     <table class="records_list table table-striped">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Address</th>
-                <th>City</th>
-                <th>Telephone</th>
+                <th>{% trans %}owner.id{% endtrans %}</th>
+                <th>{% trans %}owner.firstname{% endtrans %}</th>
+                <th>{% trans %}owner.lastname{% endtrans %}</th>
+                <th>{% trans %}owner.address{% endtrans %}</th>
+                <th>{% trans %}owner.city{% endtrans %}</th>
+                <th>{% trans %}owner.telephone{% endtrans %}</th>
                 <th>{% trans %}actions{% endtrans %}</th>
             </tr>
         </thead>
@@ -61,7 +61,7 @@
         <li>
             <a href="{{ path('owner_new') }}">
                 <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
-                {% trans %}owner{% endtrans %} {% trans %}create.new{% endtrans %}
+                {% trans %}owner.owner{% endtrans %} {% trans %}create.new{% endtrans %}
             </a>
         </li>
     </ul>

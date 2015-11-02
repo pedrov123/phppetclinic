@@ -6,11 +6,19 @@ edit: ändern
 show: anzeigen
 Delete: Löschen
 Update: Aktualisieren
+Create: Hinzufügen
 language:
   switcher: Sprache einstellen
   en: Englisch
   de: Deutsch
-owner: Besitzer
+owner:
+  owner: Besitzer
+  id: Id
+  firstname: Vorname
+  lastname: Nachname
+  address: Adresse
+  city: Stadt
+  telephone: Telefon
 add:
   pet: Tier hinzufügen
   visit: Besuch hinzufügen

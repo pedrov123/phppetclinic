@@ -6,11 +6,19 @@ edit: edit
 show: show
 Delete: Delete
 Update: Update
+Create: Create
 language:
   switcher: Choose Language
   en: English
   de: German
-owner: Owner
+owner:
+  owner: Owner
+  id: Id
+  firstname: Firstname
+  lastname: Lastname
+  address: Address
+  city: City
+  telephone: Telephone
 add:
   pet: Add Pet
   visit: Add Visit
