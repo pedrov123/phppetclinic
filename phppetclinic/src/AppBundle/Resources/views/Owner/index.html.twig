@@ -1,9 +1,9 @@
 {% extends '::base.html.twig' %}
 
-{% block title -%}{% trans %}owner.owner{% endtrans %}{% endblock %}
+{% block title -%}{% trans %}Owner{% endtrans %}{% endblock %}
 
 {% block body -%}
-    <h1>{% trans %}owner.owner{% endtrans %}</h1>
+    <h1>{% trans %}Owner{% endtrans %}</h1>
 
     {# total items count #}
     <div class="count">
@@ -61,7 +61,7 @@
         <li>
             <a href="{{ path('owner_new') }}">
                 <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
-                {% trans %}owner.owner{% endtrans %} {% trans %}create.new{% endtrans %}
+                {% trans %}Owner{% endtrans %} {% trans %}create.new{% endtrans %}
             </a>
         </li>
     </ul>

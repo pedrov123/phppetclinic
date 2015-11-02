@@ -1,9 +1,9 @@
 {% extends '::base.html.twig' %}
 
-{% block title -%}{% trans %}owner.owner{% endtrans %}{% endblock %}
+{% block title -%}{% trans %}Owner{% endtrans %}{% endblock %}
 
 {% block body -%}
-    <h1>{% trans %}owner.owner{% endtrans %}</h1>
+    <h1>{% trans %}Owner{% endtrans %}</h1>
 
     <table class="record_properties table table-striped">
         <tbody>
@@ -32,14 +32,14 @@
                 <td>{{ entity.telephone }}</td>
             </tr>
             <tr>
-                <th>Pets</th>
+                <th>{% trans %}pet.pets{% endtrans %}</th>
                 <td>
                     <table class="table table-striped">
                     {% for pet in entity.pets %}
-                        <tr><th>Pet.Id</th><td>{{ pet.id }}</td></tr>
-                        <tr><th>Pet.Name</th><td>{{ pet.name }}</td></tr>
-                        <tr><th>Pet.Birthdate</th><td>{{ pet.birthdate|date('d.m.Y') }}</td></tr>
-                        <tr><th>Pet.PetType</th><td>{% if pet.petType %}{{ pet.petType.name }}{% endif %}</td></tr>
+                        <tr><th>{% trans %}Id{% endtrans %}</th><td>{{ pet.id }}</td></tr>
+                        <tr><th>{% trans %}Name{% endtrans %}</th><td>{{ pet.name }}</td></tr>
+                        <tr><th>{% trans %}Birthdate{% endtrans %}</th><td>{{ pet.birthdate|date('d.m.Y') }}</td></tr>
+                        <tr><th>{% trans %}pettype.pettype{% endtrans %}</th><td>{% if pet.petType %}{{ pet.petType.name }}{% endif %}</td></tr>
                         <tr>
                             <td>
                                 <a href="{{ path('pet_edit', {'id': pet.id }) }}">
@@ -50,7 +50,7 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <th>Visits</th>
+                            <th>{% trans %}visit.visits{% endtrans %}</th>
                             <td>
                             <table class="record_properties table table-striped">
                         {% for visit in pet.visits %}
@@ -96,7 +96,7 @@
     </li>
     <li>
         <a href="{{ path('owner_edit', { 'id': entity.id }) }}">
-            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>{% trans %}owner.owner{% endtrans %}
+            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>{% trans %}Owner{% endtrans %}
             {% trans %}edit{% endtrans %}
         </a>
     </li>
