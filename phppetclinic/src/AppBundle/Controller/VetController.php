@@ -42,7 +42,7 @@ class VetController extends Controller
             'pagination' => $pagination,
             'entities' => $entities,
             'lastUpdated' => $lastUpdated,
-            'feedId' => sha1($this->get('router')->generate('vet', array('_format'=> 'atom'), true)),
+            'feedId' => sha1($this->get('router')->generate('vet', array('_format'=> 'atom'))),
         );
     }
 
