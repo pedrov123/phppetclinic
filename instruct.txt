@@ -1,0 +1,43 @@
+    1  cd Desktop
+    2  git clone https://github.com/mmennis/SymfonyPetClinic.git
+    3  cd C:/xampp
+    4  cd htdocs
+    5  git clone https://github.com/mmennis/SymfonyPetClinic.git
+    6  cd desktop
+    7  clear
+    8  cd desktop
+    9  cd ..
+   10  cd ..
+   11  cd ..
+   12  cd desktop
+   13  cd Desktop
+   14  cd ..
+   15  dir
+   16  cd c
+   17  cd desktop
+   18  cd desktop
+   19  git clone https://github.com/phasenraum2010/phppetclinic.git
+   20  cd phppetclinic/
+   21  git status
+   22  git add --all
+   23  git commit -m "classe do player"
+   24  git push origin master
+   25  git status
+   26  git remote
+   27  git remote -v
+   28  git remote hekp
+   29  git remote help
+   30  git remote add origin https://github.com/pedrov123/phppetclinic.git
+   31  git remote add pedro https://github.com/pedrov123/phppetclinic.git
+   32  git remote -v
+   33  git push pedro
+   34  git status
+   35  git remote help
+   36  git remove origin
+   37  git remote remove origin
+   38  git rename pedro origin
+   39  git remote rename pedro origin
+   40  git status
+   41  git remote -v
+   42  history
+   43  history > instruct.txt
